@@ -1,4 +1,5 @@
 <section class="property-binding">
+  <!--
   <article>
     <h3>Interpolation / Interpolação</h3>
     <p>Strbg renderizada com interpolação: {{ url }}</p>
@@ -11,9 +12,9 @@
   <article>
     <h3>Property Binding</h3>
     <img src="{{ urlImagem }}" />
-    <!--com interpolação-->
+    
     <img [src]="urlImagem" />
-    <!--com Property Binding-->
+   
   </article>
   <article>
     <h3>Class e Style Binding</h3>
@@ -69,6 +70,36 @@
       >
         Erro
       </div>
+    </div>
+  </article>
+    -->
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me clique
+      </button>
+
+      <br /><br />
+
+      <input
+        type="text"
+        #valor
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(valor.value)"
+        (blur)="salvarValor(valor.value)"
+      />
+      <p>{{ valorAtual }}</p>
+      <p>{{ valorSalvo }}</p>
+
+      <br />
+
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >Passe o mouse sobre mim</span
+      >
     </div>
   </article>
 </section>
