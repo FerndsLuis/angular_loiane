@@ -6,4 +6,15 @@
       <app-data-binding></app-data-binding>
     </article>
   </section>
+
+  <section class="mt-5">
+    <article>
+      <h3>Ciclo de vida do component - Life Cicle Hooks</h3>
+      <app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+      <button class="btn btn-danger" (click)="mudarValor()">Mudar valor</button>
+      <button class="btn btn-dark" (click)="DestruiCiclo()">
+        Deletar ciclo
+      </button>
+    </article>
+  </section>
 </div>

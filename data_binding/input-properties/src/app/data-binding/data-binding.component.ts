@@ -10,7 +10,7 @@ export class DataBindingComponent implements OnInit {
   valorInicial: number = 15;
 
   onMudouValor(evento: any) {
-    console.log(evento.novoValorgit);
+    console.log(evento.novoValor);
   }
 
   constructor() {}
