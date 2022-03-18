@@ -9,3 +9,11 @@
 <p highlight [defaultColor]="'grey'" [highlightColor]="'red'">
   Texto com highlight com cores customizadas
 </p>
+
+<hr />
+
+<h5>Lista de cursos</h5>
+<div *ngElse="mostrarCursos">Cursos</div>
+
+<br />
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
