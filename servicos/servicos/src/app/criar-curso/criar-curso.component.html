@@ -1,0 +1,14 @@
+<p>criar-curso works!</p>
+
+<input type="text" id="curso" #cursoDigitado />
+<input
+  type="button"
+  value="Adicionar curso"
+  (click)="adicionarCurso(cursoDigitado.value)"
+/>
+
+<br />
+
+<ul>
+  <li *ngFor="let curso of cursos">{{ curso }}</li>
+</ul>
